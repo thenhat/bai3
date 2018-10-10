@@ -3,8 +3,9 @@
 
 int findMaxvalue(int a[10] ) {
     int sophantu;
-    int max = 0;
+    int max=a[1];
     for (int i = 0; i < sophantu; ++i) {
+
         if (max < a[i]) {
             max = a[i];
         }
@@ -14,7 +15,7 @@ int findMaxvalue(int a[10] ) {
 
 int findMinvalue(int a[10]) {
     int sophantu;
-    int min = 0;
+    int min = a[1];
     for (int i = 0; i < sophantu; ++i) {
         if (min > a[i]) {
             min = a[i];
@@ -46,10 +47,10 @@ int main() {
     scanf("%d", &b);
     switch (b) {
         case 1 :
-            printf("Gia tri lon nhat cua mang %d :", findMaxvalue(mangsonguyen[10]));
+            printf("Gia tri lon nhat cua mang la: %d ", findMaxvalue(mangsonguyen));
             break;
         case 2 :
-            printf("Gia tri nho nhat cua mang la %d :", findMinvalue(mangsonguyen[10]));
+            printf("Gia tri nho nhat cua mang la: %d ", findMinvalue(mangsonguyen));
             break;
     }
     return 0;
